@@ -21,7 +21,7 @@ spec:
     spec:
       containers:
       - name: primary
-        image: nginx
+        image: hello-world
         ports:
         - containerPort: 80
         readinessProbe:
