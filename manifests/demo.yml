@@ -21,13 +21,13 @@ spec:
     spec:
       containers:
       - name: primary
-        image: index.docker.io/lwander/spin-kub-v2-demo
+        image: nginx
         ports:
-        - containerPort: 8000
+        - containerPort: 80
         readinessProbe:
           httpGet:
             path: /
-            port: 8000
+            port: 80
 
 ---
 
@@ -43,4 +43,4 @@ spec:
   ports:
   - protocol: TCP
     port: 80
-    targetPort: 8000
+    targetPort: 80
